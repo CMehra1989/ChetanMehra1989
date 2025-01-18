@@ -15,6 +15,31 @@
 
 </head>
 <body>
+
+    <h1>Welcome!</h1>
+    <p id="message">Hello, <span id="username">User</span>!</p>
+
+    <script>
+        // Function to get the value of a query parameter by name
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the 'name' parameter from the URL
+        const name = getQueryParam('name');
+
+        // If a name is provided in the URL, update the content
+        if (name) {
+            document.getElementById('username').textContent = name;
+        }
+    </script>
+
+
+
+
+
+    
     <div class="album">
         <div class="responsive-container-block bg">
           <div class="responsive-container-block img-cont">
